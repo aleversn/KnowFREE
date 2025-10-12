@@ -42,11 +42,12 @@ Combining an **LLM-based knowledge enhancement workflow** with a **span-based Kn
 
 ## ♠️ Model Checkpoints
 
-We release our model checkpoints in huggingface as listed below:
-| Model                                                                             |  F1   |
-| :-------------------------------------------------------------------------------- | :---: |
+Due to the large number of experiments, the architectural differences between the initial and reconstructed models, and the limited practical value of low-resource checkpoints sampled from the full dataset, we only release a few representative checkpoints (e.g., weibo) on Hugging Face for reference, as shown below:
 
-> Some results may differ from those reported in the paper due to the regeneration of the dataset.
+| Model                                                                                                                         |  F1   |
+| :---------------------------------------------------------------------------------------------------------------------------- | :---: |
+| [aleversn/KnowFREE-Weibo-BERT-base (Many shots 1000 with ChatGLM3)](https://huggingface.co/aleversn/KnowFREE-Weibo-BERT-base) | 76.78 |
+| [aleversn/KnowFREE-Youku-BERT-base (Many shots 1000 with ChatGLM3)](https://huggingface.co/aleversn/KnowFREE-Youku-BERT-base) | 84.50 |
 
 ---
 
