@@ -2,7 +2,7 @@
 
 ![workflow](docs/assets/workflow.png)
 
-## 🌍 Overview
+### 🌍 Overview
 
 This repository provides the official implementation of our paper:
 
@@ -33,14 +33,14 @@ Combining an **LLM-based knowledge enhancement workflow** with a **span-based Kn
 
 ---
 
-## 🔗 Quick Links
+### 🔗 Quick Links
 
   - [Model Checkpoints](#♠️-model-checkpoints)
   - [Data Augmentation Workflow](#📊-data-augmentation-workflow)
   - [Train KnowFREE](#🔥-run-knowfree-models)
   - [Citation](#📚-citation)
 
-## ♠️ Model Checkpoints
+### ♠️ Model Checkpoints
 
 Due to the large number of experiments, the architectural differences between the initial and reconstructed models, and the limited practical value of low-resource checkpoints sampled from the full dataset, we only release a few representative checkpoints (e.g., weibo) on Hugging Face for reference, as shown below:
 
@@ -51,7 +51,7 @@ Due to the large number of experiments, the architectural differences between th
 
 ---
 
-## 🧩 KnowFREE Framework
+### 🧩 KnowFREE Framework
 
 ![KnowFREE](docs/assets/knowfree.png)
 
@@ -64,9 +64,9 @@ Due to the large number of experiments, the architectural differences between th
 
 ---
 
-## ⚙️ Installation Guide
+### ⚙️ Installation Guide
 
-### Core Dependencies
+#### Core Dependencies
 
 Create an environment and install dependencies:
 
@@ -81,7 +81,7 @@ pip install transformers==4.18.0 fastNLP==1.0.1 PrettyTable
 pip install torch-scatter==2.0.8 -f https://data.pyg.org/whl/torch-1.8.0+cu111.html
 ```
 
-## 📊 Data Augmentation Workflow
+### 📊 Data Augmentation Workflow
 
 See the detailed data synthesis pipeline in [Syn_Pipelines](docs/Syn_Pipelines.md).
 
@@ -90,11 +90,11 @@ For each entity label, LLMs generate descriptive explanations that are integrate
 
 ---
 
-## 🔥 Run KnowFREE Models
+### 🔥 Run KnowFREE Models
 
-### Training with `KnowFREE`
+#### Training with `KnowFREE`
 
-#### Dataset Format
+##### Dataset Format
 
 Specify the dataset path using the `data_present_path` argument (`Default`: `./datasets/present.json`). The file should be a JSON object with the following format:
 
@@ -269,7 +269,7 @@ for i in trainer(num_epochs=120, other_lr=1e-3, weight_decay=0.01, remove_clashe
 - `nested`: whether support nested entities, when do sequence labeling like `CMeEE`, you should set it as true and disabled `remove_clashed`.
 - `eval_call_step`: determine evaluation with `x` steps, defined with a function call.
 
-#### Evaluation Only
+##### Evaluation Only
 
 Comment out the training loop to evaluate directly:
 
@@ -277,7 +277,7 @@ Comment out the training loop to evaluate directly:
 trainer.eval(0, is_eval=True)
 ```
 
-### Train with `CNN Nested NER`
+#### Train with `CNN Nested NER`
 
 ```python
 from main.trainers.cnnner_trainer import Trainer
@@ -296,7 +296,7 @@ for i in trainer(num_epochs=120, other_lr=1e-3, weight_decay=0.01, remove_clashe
     a = i
 ```
 
-#### Prediction
+##### Prediction
 
 ```python
 from main.predictor.knowfree_predictor import KnowFREEPredictor
@@ -335,7 +335,7 @@ for entities in pred(['叶赟葆：全球时尚财运滚滚而来钱', '我要�
 ]
 ```
 
-## 📚 Citation
+### 📚 Citation
 ```bibtex
 @misc{lai2025improvinglowresourcesequencelabeling,
       title={Improving Low-Resource Sequence Labeling with Knowledge Fusion and Contextual Label Explanations}, 
