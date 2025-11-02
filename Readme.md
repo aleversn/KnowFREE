@@ -337,13 +337,27 @@ for entities in pred(['叶赟葆：全球时尚财运滚滚而来钱', '我要�
 
 ### 📚 Citation
 ```bibtex
-@misc{lai2025improvinglowresourcesequencelabeling,
-      title={Improving Low-Resource Sequence Labeling with Knowledge Fusion and Contextual Label Explanations}, 
-      author={Peichao Lai and Jiaxin Gan and Feiyang Ye and Yilei Wang and Bin Cui},
-      year={2025},
-      eprint={2501.19093},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2501.19093}, 
+@inproceedings{lai-etal-2025-improving,
+    title = "Improving Low-Resource Sequence Labeling with Knowledge Fusion and Contextual Label Explanations",
+    author = "Lai, Peichao  and
+      Gan, Jiaxin  and
+      Ye, Feiyang  and
+      Zhang, Wentao  and
+      Fu, Fangcheng  and
+      Wang, Yilei  and
+      Cui, Bin",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.288/",
+    pages = "5666--5685",
+    ISBN = "979-8-89176-332-6",
+    abstract = "Sequence labeling remains a significant challenge in low-resource, domain-specific scenarios, particularly for character-dense languages. Existing methods primarily focus on enhancing model comprehension and improving data diversity to boost performance. However, these approaches still struggle with inadequate model applicability and semantic distribution biases in domain-specific contexts. To overcome these limitations, we propose a novel framework that combines an LLM-based knowledge enhancement workflow with a span-based Knowledge Fusion for Rich and Efficient Extraction (KnowFREE) model. Our workflow employs explanation prompts to generate precise contextual interpretations of target entities, effectively mitigating semantic biases and enriching the model{'}s contextual understanding. The KnowFREE model further integrates extension label features, enabling efficient nested entity extraction without relying on external knowledge during inference. Experiments on multiple domain-specific sequence labeling datasets demonstrate that our approach achieves state-of-the-art performance, effectively addressing the challenges posed by low-resource settings."
 }
 ```
